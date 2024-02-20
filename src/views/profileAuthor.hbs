@@ -1,0 +1,70 @@
+{{#if tokenIsPresent}}
+<div class="profile" data-role="{{role}}">
+    <div class="find-status">
+        <h3>Поиск записей по статусам</h3>
+        <input type="hidden" name="action" value="status-select">
+        <select name="status" class="status-select">
+            <option value="Все статусы">Все статусы</option>
+            <option value="Черновик">Черновик</option>
+            <option value="Ожидает одобрения">Ожидает одобрения</option>
+            <option value="Одобрено">Одобрено</option>
+        </select>
+        <button type="submit" class="submitFindStatus">Найти</button>
+    </div>
+    <div class="statusSearch">
+    </div>
+    <div class="container-fluid" id="profileContent">
+        {{#each arrBlogs}}
+            <div class="profileConteinerContent">
+                <div class="profile-title">
+                    <h5>{{title}}</h5>
+                </div>
+                <img src="/{{img}}" alt="" class="imgBlog">
+                <div class="profile-status">
+                    {{#if (eq status 'Одобрено')}}
+                    <h6 class="approved-status">{{status}}</h6>
+                    <div class="blog-actions">
+                        <div class="blogBtn">
+                            <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                            <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                        </div>
+                    </div>
+                    {{else if (eq status 'Ожидает одобрения')}}
+                    <h6 class="waiting-status">{{status}}</h6>
+                    <div class="blog-actions">
+                        <div class="blogBtn">
+                            <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                            <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                        </div>
+                    </div>
+                    {{else if (eq status 'Черновик')}}
+                    <h6 class="draft-status">{{status}}</h6>
+                    {{#if rejectComment}}
+                    <div class="rejectCommentModerathor">
+                        <h6>Комментарий от модератора</h6>
+                        <p>{{rejectComment}}</p>
+                    </div>
+                    {{/if}}
+                    <div class="blog-actions">
+                        <form action="" method="POST">
+                            <input type="hidden" name="action" value="moderation-link">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <input type="submit" value="Отправить на модерацию" class="SubmitModeration"></input>
+                        </form>
+                        <div class="blogBtn">
+                            <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                            <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="descriptionBtn">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <input type="hidden" name="category" value="{{category}}">
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
+<div class="profilePagination"></div>
+{{/if}}

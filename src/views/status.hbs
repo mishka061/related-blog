@@ -1,0 +1,65 @@
+{{#if arrBlogs}}
+<div class="container-fluid" id="profileContent">
+    {{#each arrBlogs}}
+    <div class="profile-conteiner">
+        <div class="profileConteinerContent">
+            <div class="profile-title">
+                <h5>{{title}}</h5>
+            </div>
+            <img src="/{{img}}" alt="" class="imgBlog">
+            <div class="profile-status">
+                {{#if (eq status 'Одобрено')}}
+                <h6 class="approved-status">{{status}}</h6>
+                <div class="blog-actions">
+                    <div class="blogBtn">
+                        <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                    </div>
+                </div>
+                {{else if (eq status 'Ожидает одобрения')}}
+                <h6 class="waiting-status">{{status}}</h6>
+                <div class="blog-actions">
+                    <div class="blogBtn">
+                        <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                    </div>
+                </div>
+                {{else if (eq status 'Черновик')}}
+                <h6 class="draft-status">{{status}}</h6>
+                {{#if rejectComment}}
+                <div class="rejectCommentModerathor">
+                    <h6>Комментарий от модератора</h6>
+                    <p>{{rejectComment}}</p>
+                </div>
+                {{/if}}
+                <div class="blog-actions">
+                    <form action="" method="POST">
+                        <input type="hidden" name="action" value="moderation-link">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <input type="submit" value="Отправить на модерацию" class="SubmitModeration"></input>
+                    </form>
+                    <div class="blogBtn">
+                        <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                        <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                    </div>
+                </div>
+                {{else}}
+                <div class="nichegonetImg">
+                    <img src="/nichegonet.jpg" alt="" class="nichegonet">
+                </div>
+                {{/if}}
+            </div>
+            <div class="descriptionBtn">
+                <input type="hidden" name="id" value="{{_id}}">
+                <input type="hidden" name="category" value="{{category}}">
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<div class="nichegonetImg">
+    <img src="/nichegonet.jpg" alt="" class="nichegonet">
+</div>
+
+{{/if}}

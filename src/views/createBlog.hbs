@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div id="createBlogContainer">
+        <h4 class="h1-title">Написать статью</h4>
+        <div class="form signup" id="formTest">
+            <form action="/createBlog" method="post" enctype="multipart/form-data">
+                <div class="article-details">
+                    <p class="article-subtitle">Название статьи</p>
+                    <input type="text" name="title" class="article-title-input" />
+                    <p class="article-subtitle">Описание статьи</p>
+                    <textarea name="description" cols="30" rows="3" class="article-description-textarea"></textarea>
+                    <p class="article-subtitle">Текст статьи</p>
+                    <textarea name="text" cols="30" rows="5" class="article-text-textarea"></textarea>
+                    <p class="article-category-title">Категории</p>
+                    <select name="category" class="article-category-select">
+                        <option>JavaScript</option>
+                        <option>CSS</option>
+                        <option>HTML</option>
+                        <option>Разное</option>
+                    </select>
+                    <input type="hidden" name="status" id="" value="Черновик">
+                    <div class="form-group">
+                        <input type="file" id="fileInput" name="image" />
+                    </div>
+                </div>
+                <div class="submit-section">
+                    <input type="submit" name="submit" class="submit-button" value="Добавить" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

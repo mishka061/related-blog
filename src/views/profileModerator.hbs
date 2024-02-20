@@ -1,0 +1,109 @@
+{{#if tokenIsPresent}}
+<div class="paginatorCountBlock">
+    {{#if arrBlogs}}
+    <h3 class="titleModerator" >Статьи, ожидающие одобрения на публикацию</h3>
+    <div class="noArrBlogs" style="display: none;">
+        <img src="/1613545523_204-p-kartinki-na-belom-fone-dlya-prezentatsii-234.jpg" alt="">
+    </div>
+    <div class="container-fluid" id="profileContent" data-role="{{role}}">
+        {{#each arrBlogs}}
+        <div id="profileAllconteiner" data-id="{{_id}}">
+            <div class="profileConteinerContent">
+                <div class="profile-title">
+                    <h5>{{title}}</h5>
+                </div>
+                <img src="/{{img}}" alt="" class="imgBlog">
+                <div class="profile-status">
+                    <h6 class="waiting-status">{{status}}</h6>
+                </div>
+                <div class="descriptionBtn">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <input type="hidden" name="category" value="{{category}}">
+                    <button class="readMore"><a href="/blog/{{_id}}">Читать далее -></a> </button>
+                </div>
+            </div>
+            <div class="actionsContent">
+                <div class="approved-actions">
+                    <button class="linkModerator"><a href="/edit/{{_id}}">Редактировать</a></button>
+                    <input type="hidden" name="id" data-id="{{_id}}">
+                    <input type="hidden" name="status" value="{{status}}">
+                    <button type="submit" class="approvedBlogBtn">Одобрить</button>
+                </div>
+            </div>
+            <div class="rejectBlog-actions">
+                <p>Написать автору причину отклонения статьи</p>
+                <input type="hidden" name="action" value="rejectBlog">
+                <textarea name="rejectComment" rows="2" class="rejectTextAreaBlog" data-id="{{_id}}"
+                    data-status="{{status}}"></textarea>
+                <button type="submit" class="rejectBlog">Отклонить</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <div class="noArrBlogs">
+        <img src="/1613545523_204-p-kartinki-na-belom-fone-dlya-prezentatsii-234.jpg" alt="">
+    </div>
+    {{/if}}
+    {{#if allBlogs}}
+    <h3 class="titleModerator">Все статьи</h3>
+    <div class="container-fluid" id="profileAllContent">
+        {{#each allBlogs}}
+        <div class="profile-all-conteiner" data-id="{{_id}}">
+            <div class="profileConteinerContent">
+                <div class="profile-title">
+                    <h5>{{title}}</h5>
+                </div>
+                <img src="/{{img}}" alt="" class="imgBlog">
+
+                <div class="profile-status">
+                    {{#if (eq status 'Одобрено')}}
+                    <h6 class="approved-status">{{status}}</h6>
+                    <div class="blog-actions">
+                        <div class="blogBtn">
+                            <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                            <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                        </div>
+                    </div>
+                    {{else if (eq status 'Ожидает одобрения')}}
+                    <h6 class="waiting-status">{{status}}</h6>
+                    <div class="blog-actions">
+                        <div class="blogBtn">
+                            <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                            <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                        </div>
+                    </div>
+                    {{else if (eq status 'Черновик')}}
+                    <h6 class="draft-status">{{status}}</h6>
+                    <div class="blog-actions">
+                        <div class="blogBtn">
+                            <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                            <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+                <div class="descriptionBtn">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <input type="hidden" name="category" value="{{category}}">
+                    <button class="readMore"><a href="/blog/{{_id}}">Читать далее -></a> </button>
+                </div>
+            </div>
+            <div>
+                {{#each comments}}
+                <div class="blog-read-comments">
+                    <p>{{this}}</p>
+                    <input type="hidden" name="id" data-id="{{../_id}}">
+                    <input type="hidden" name="comments" value="{{this}}">
+                    <button type="submit" class="deleteComment">Удалить комментарий</button>
+                </div>
+                {{/each }}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+    <div class="profilePagination"></div>
+</div>
+
+{{/if}}

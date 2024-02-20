@@ -1,0 +1,266 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+#homeContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+h5 {
+  font-size: 22px;
+}
+.home-category a,
+.home-category p,
+.home-description {
+  font-size: 16px;
+}
+.readMore a {
+  text-decoration: none;
+  font-size: 14px;
+}
+.home-conteiner {
+  background-color: #ffffff7e;
+  box-shadow: 4px 4px 8px 0px rgba(159, 192, 253, 0.568);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.imgBlog {
+  width: 100%;
+}
+.home-title {
+  min-height: 70px;
+}
+.home-title h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.home-description {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.paginationBtn {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: rgb(19, 19, 163);
+}
+.paginationBtn:hover {
+  background: #89b2ff94;
+  color: rgb(0, 29, 158);
+}
+.paginationAddClass {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #89b2ff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: rgb(19, 19, 163);
+}
+.titleSearchCategory {
+  padding-top: 20px;
+  text-align: center;
+}
+.titleSearchCategory {
+  font-size: 32px;
+}
+.blog-item img {
+  width: 100%;
+}
+.errorImg {
+  width: 100%;
+}
+.blogImgEditTest {
+  width: 100%;
+}
+.titleModerator {
+  margin: 20px;
+  text-align: center;
+}
+
+.homeConteinerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+.descriptionBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.descriptionBtn button {
+  margin-top: 10px;
+  display: flex;
+  height: 26px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  color: rgb(19, 19, 163);
+}
+.descriptionBtn button:hover {
+  background: #89b2ff;
+  background: -webkit-linear-gradient(to bottom, #6499fd #89b2ff86);
+  background: linear-gradient(to bottom, #6499fd #89b2ff91);
+  color: rgb(0, 29, 158);
+}
+.readMore a {
+  color: rgb(19, 19, 163);
+  padding: 0 5px;
+}
+.readMore {
+  width: 40%;
+}
+.submitCategoryHome {
+  /* margin-top: 10px; */
+  display: flex;
+  height: 26px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid rgb(0, 29, 158);
+  color: #075eff;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .titleSearchCategory {
+    padding-top: 18px;
+  }
+  .titleSearchCategory {
+    font-size: 28px;
+  }
+  .home-title {
+    min-height: 60px;
+  }
+  .home-conteiner {
+    margin: 16px;
+    padding: 16px;
+  }
+  #homeContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+  .homeConteinerContent {
+    height: 380px;
+  }
+  h5 {
+    font-size: 21px;
+  }
+  .home-category a,
+  .home-category p,
+  .home-description {
+    font-size: 16px;
+  }
+  .descriptionBtn button {
+    margin-top: 7px;
+    height: 24px;
+  }
+  .readMore a {
+    font-size: 13px;
+    padding: 0 4px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .titleSearchCategory {
+    padding-top: 17px;
+  }
+  .titleSearchCategory {
+    font-size: 23px;
+  }
+  .home-title {
+    min-height: 50px;
+  }
+  .home-conteiner {
+    margin: 12px;
+    padding: 12px;
+  }
+  #homeContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .homeConteinerContent {
+    height: 360px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  .home-category a,
+  .home-category p,
+  .home-description {
+    font-size: 14px;
+  }
+  .descriptionBtn button {
+    margin-top: 6px;
+    height: 22px;
+  }
+  .readMore a {
+    font-size: 12px;
+    padding: 0 3px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titleSearchCategory {
+    padding-top: 15px;
+  }
+  .titleSearchCategory {
+    font-size: 20px;
+  }
+  .home-title {
+    min-height: 40px;
+  }
+  .home-conteiner {
+    margin: 10px;
+    padding: 10px;
+  }
+  #homeContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .homeConteinerContent {
+    height: 340px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  .home-category a,
+  .home-category p,
+  .home-description {
+    font-size: 13px;
+  }
+  .descriptionBtn button {
+    margin-top: 6px;
+    height: 20px;
+  }
+  .readMore a {
+    font-size: 10px;
+    padding: 0 2px;
+  }
+}

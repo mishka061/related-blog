@@ -1,0 +1,439 @@
+#profileContent {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+#profileAllconteiner {
+  box-shadow: 4px 4px 8px 0px rgba(159, 192, 253, 0.568);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#profileAllContent {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.profile-all-conteiner {
+  box-shadow: 4px 4px 8px 0px rgba(159, 192, 253, 0.568);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.profile {
+  min-height: 80vh;
+}
+.profileConteinerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 4px 8px 0px rgba(159, 192, 253, 0.568);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.imgBlog {
+  width: 100%;
+  height: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bdbdbd;
+  object-fit: cover;
+}
+.profile-title {
+  height: 70px;
+}
+.find-status h3 {
+  font-size: 25px;
+}
+.profile-title h5 {
+  font-size: 20px;
+}
+.find-status input,
+.find-status select,
+.SubmitModeration,
+.edit-link-blog,
+.delete-link {
+  font-size: 16px;
+}
+.profile-title h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.profile-category a {
+  color: rgb(19, 19, 163);
+}
+
+.profile-description {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profilePagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.paginationContentBtn {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: rgb(19, 19, 163);
+}
+.paginationContentBtn:hover {
+  background: #89b2ff94;
+  color: rgb(0, 29, 158);
+}
+.profilePaginationAddClass {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #89b2ff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: rgb(19, 19, 163);
+}
+.find-status {
+  text-align: center;
+  margin-top: 20px;
+}
+.submitFindStatus {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.status-select {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 1px;
+}
+.submitFindStatus:hover,
+.SubmitModeration:hover,
+.edit-link-blog:hover {
+  background: #89b2ff94;
+  color: rgb(0, 29, 158);
+}
+.SubmitModeration {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 1px 5px;
+  width: 100%;
+  text-align: start;
+}
+.edit-link-blog {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(0, 29, 158);
+  border-radius: 5px;
+  padding: 1px 10px;
+  margin-top: 10px;
+  text-align: start;
+  width: 45%;
+}
+.edit-link-blog a {
+  text-decoration: none;
+  color: #000;
+}
+.blogBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.delete-link {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #ffffff94;
+  border: 2px solid rgb(255, 35, 35);
+  border-radius: 5px;
+  padding: 1px 10px;
+  margin-top: 10px;
+  text-align: start;
+  width: 40%;
+}
+.delete-link a {
+  color: red;
+  text-decoration: none;
+}
+.delete-link:hover {
+  background-color: #fc2d2d;
+}
+.delete-link a:hover {
+  color: #ffffff;
+}
+.approved-status {
+  color: rgb(3, 216, 3);
+}
+.waiting-status {
+  color: rgb(255, 196, 0);
+}
+.draft-status {
+  color: rgb(114, 114, 114);
+}
+.approved-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.linkModerator {
+  background-color: #f1fcff;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: 2px solid rgb(0, 29, 158);
+  text-align: start;
+  width: 45%;
+}
+.approvedBlogBtn {
+  width: 40%;
+  background-color: #7bff76;
+  border-radius: 5px;
+  color: rgb(0, 29, 158);
+  border: 2px solid rgb(0, 29, 158);
+  padding-left: 10px;
+  text-align: start;
+}
+.linkModerator a {
+  text-decoration: none;
+}
+.linkModerator:hover {
+  background: #89b2ff94;
+  color: rgb(0, 29, 158);
+}
+.approvedBlogBtn:hover {
+  background-color: #06a501;
+  color: white;
+}
+.rejectBlog-actions {
+  border-top: 1px solid #b6b6b6cb;
+  margin-top: 10px;
+}
+.rejectTextAreaBlog {
+  width: 100%;
+}
+.rejectBlog {
+  width: 100%;
+  background-color: #fd2626c7;
+  border-radius: 5px;
+  color: rgb(0, 29, 158);
+  border: 2px solid rgb(0, 29, 158);
+  text-align: start;
+  padding-left: 10px;
+}
+.rejectBlog:hover {
+  color: white;
+  background-color: #ca0000;
+}
+.rejectCommentModerathor {
+  background-color: #ffffff7e;
+  border: 2px solid #89b2ff94;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.tableContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tableTitle,
+.adminInfoUsers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.tableTitle div {
+  border: 1px solid gray;
+  padding: 10px;
+  font-size: 20px;
+}
+.adminSelect {
+  font-size: 18px;
+  border-radius: 5px;
+}
+.adminInfoUsers div {
+  border: 1px solid gray;
+  padding: 5px;
+  font-size: 18px;
+}
+#profileAdmin {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#profileAdmin p {
+  font-size: 28px;
+}
+.noArrBlogs {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+.noArrBlogs img {
+  width: 100%;
+  height: auto;
+}
+.deleteComment {
+  background-color: #ff6a6ac7;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(3, 3, 3);
+  text-align: start;
+}
+.deleteComment:hover {
+  color: white;
+  background-color: #ca0000;
+}
+.nichegonetImg {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nichegonet {
+  margin-top: 20px;
+  width: 100%;
+}
+.blog-read-comments {
+  background-color: #ffffff7e;
+  box-shadow: 4px 4px 8px 0px rgba(159, 192, 253, 0.568);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.adminChangeRole {
+  height: 28px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .tableTitle,
+  .adminInfoUsers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  #profileAdmin p {
+    font-size: 26px;
+  }
+  .adminChangeRole {
+    height: 28px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  #profileAdmin {
+    width: 90%;
+  }
+  .tableTitle div {
+    padding: 8px;
+    font-size: 18px;
+  }
+  .adminSelect {
+    font-size: 16px;
+  }
+  .adminInfoUsers div {
+    padding: 5px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  #profileAdmin p {
+    font-size: 22px;
+  }
+  .tableTitle,
+  .adminInfoUsers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  }
+  .adminChangeRole {
+    height: 24px;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  #profileAdmin {
+    width: 100%;
+  }
+  .tableTitle div {
+    word-break: break-all;
+    padding: 8px;
+    font-size: 17px;
+  }
+  .adminSelect {
+    font-size: 15px;
+  }
+  .adminInfoUsers div {
+    word-break: break-all;
+    padding: 5px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #profileAdmin p {
+    font-size: 20px;
+  }
+  .tableTitle,
+  .adminInfoUsers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .adminChangeRole {
+    height: 24px;
+    font-size: 13px;
+  }
+  .adminSelect {
+    font-size: 13px;
+  }
+
+  #profileAdmin {
+    width: 100%;
+  }
+  .tableTitle div {
+    word-break: break-all;
+    padding: 8px;
+    font-size: 17px;
+  }
+  .adminSelect {
+    font-size: 15px;
+    width: 80%;
+    margin-bottom: 5px;
+  }
+  .adminInfoUsers div {
+    word-break: break-all;
+    padding: 5px;
+    font-size: 15px;
+  }
+}

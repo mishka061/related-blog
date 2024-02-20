@@ -1,0 +1,66 @@
+{{#if tokenIsPresent}}
+<div class="container-fluid" id="blogIdContent" data-id="{{blog._id}}">
+    <div class="blogId-conteiner">
+        <div class="blogIdConteinerContent">
+            <div class="blogId-title">
+                <h5>{{blog.title}}</h5>
+            </div>
+            <img src="/{{blog.img}}" alt="" class="imgBlog">
+            <div class="home-category">
+                <p>{{blog.datePublication}}</p>
+                <input type="hidden" name="action" value="search">
+                <input type="hidden" id="inpCategoryHome" name="category" value="{{blog.category}}">
+                <button class="submitCategoryHome">{{blog.category}}</button>
+            </div>
+            <div class="blogId-description">
+                <h6>{{blog.description}}</h6>
+                <p>{{blog.text}}</p>
+            </div>
+            <div class="descriptionBtn">
+                <input type="hidden" name="category" value="{{blog.category}}">
+                <input type="hidden" name="id" value="{{id}}">
+            </div>
+        </div>
+    </div>
+    {{#each blog.comments}}
+    <div class="formCommentBlog">
+        <p>{{this}}</p>
+    </div>
+    {{/each}}
+    <div class="new-blog-comments">
+    </div>
+    <div>
+        {{#ifEquals role 'User'}}
+        <div class="formCommentBlog">
+            <textarea name="comment" class="textAreaCommit"> </textarea>
+            <button type="submit" class="textAreaSubmit" data-id="{{blog._id}}">Добавить комментарий</button>
+        </div>
+        {{/ifEquals}}
+    </div>
+</div>
+{{else}}
+<div class="container-fluid" id="blogIdContent" data-id="{{blog._id}}">
+    <div class="blogId-conteiner">
+        <div class="blogIdConteinerContent">
+            <div class="blogId-title">
+                <h5>{{blog.title}}</h5>
+            </div>
+            <img src="/{{blog.img}}" alt="" class="img">
+            <div class="home-category">
+                <p>{{blog.datePublication}}</p>
+                <input type="hidden" name="action" value="search">
+                <input type="hidden" id="inpCategoryHome" name="category" value="{{blog.category}}">
+                <button class="submitCategoryHome">{{blog.category}}</button>
+            </div>
+            <div class="blogId-description">
+                <h6>{{blog.description}}</h6>
+                <p>{{blog.text}}</p>
+            </div>
+            <div class="descriptionBtn">
+                <input type="hidden" name="category" value="{{blog.category}}">
+                <input type="hidden" name="id" value="{{id}}">
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

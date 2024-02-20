@@ -1,0 +1,55 @@
+<div class="profile-conteiner" data-id="{{newArrBlogs._id}}">
+    <div class="profileConteinerContent">
+        <div class="profile-title">
+            <h5>{{newArrBlogs.title}}</h5>
+        </div>
+        <img src="/{{newArrBlogs.img}}" alt="" class="imgBlog">
+
+        <div class="profile-status">
+            {{#if (eq status 'Одобрено')}}
+            <h6 class="approved-status">{{newArrBlogs.status}}</h6>
+            <div class="blog-actions">
+                <div class="blogBtn">
+                    <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                    <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                </div>
+            </div>
+            {{else if (eq status 'Ожидает одобрения')}}
+            <h6 class="waiting-status">{{newArrBlogs.status}}</h6>
+            <div class="blog-actions">
+                <div class="blogBtn">
+                    <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                    <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                </div>
+            </div>
+            {{else if (eq status 'Черновик')}}
+            <h6 class="draft-status">{{newArrBlogs.status}}</h6>
+            {{#if rejectComment}}
+            <div class="rejectCommentModerathor">
+                <h6>Комментарий от модератора</h6>
+                <p>{{newArrBlogs.rejectComment}}</p>
+            </div>
+            {{/if}}
+            <div class="blog-actions">
+                <div class="blogBtn">
+                    <button class="edit-link-blog"><a href="/edit/{{_id}}">Редактировать</a></button>
+                    <button class="delete-link"><a href="/delete/{{_id}}">Удалить</a></button>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+        <div class="descriptionBtn">
+            <input type="hidden" name="id" value="{{_id}}">
+            <input type="hidden" name="category" value="{{newArrBlogs.category}}">
+            <button class="readMore"><a href="/blog/{{newArrBlogs._id}}">Читать далее -></a> </button>
+        </div>
+    </div>
+    {{#each comments}}
+    <div class="blog-comments">
+        <p>{{this}}</p>
+        <input type="hidden" name="id" data-id="{{../_id}}">
+        <input type="hidden" name="comments" value="{{this}}">
+        <button type="submit" class="deleteComment">Удалить комментарий</button>
+    </div>
+    {{/each }}
+</div>

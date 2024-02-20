@@ -1,0 +1,46 @@
+<div class="container-fluid" id="profileAdmin" data-role="{{role}}">
+    <p>Все пользователи зарегестрированные на сайте</p>
+    {{role}}
+    <div class="table">
+        <div class="tableTitle">
+            <div>
+                Логин
+            </div>
+            <div>
+                email
+            </div>
+            <div>
+                Роль на сайте
+            </div>
+            <div>
+                Поменять роль на сайте
+            </div>
+        </div>
+        <div>
+            {{#each arrUsers}}
+            <div class="adminInfoUsers">
+                <div>
+                    {{login}}
+                </div>
+                <div>
+                    {{email}}
+                </div>
+                <div class="roleUser" data-role="{{role}}" id="role_{{_id}}">
+                    {{role}}
+                </div>
+                <div>
+                    <select name="role" class="adminSelect" id="select_{{_id}}">
+                        <option value="User">User</option>
+                        <option value="Author">Author</option>
+                        <option value="Moderator">Moderator</option>
+                        <option value="Administrator">Administrator</option>
+                    </select>
+                    <button type="submit" class="adminChangeRole" data-id="{{_id}}">Поменять</button>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+

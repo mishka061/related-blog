@@ -1,0 +1,38 @@
+export const messageError = {
+  errors: {
+    registrationError: "Регистрация не выполнена",
+    postRegistrationError: "Ошибка в функции postRegistration",
+    getRegistrationError: "Ошибка в функции getRegistration",
+    authorizationError: "Авторизация не выполнена",
+    postAuthorizationError: "Ошибка в функции postAuthorization",
+    internalServerError: "Внутренняя ошибка сервера",
+    getEditBlogError: "Ошибка в функции getEditBlog",
+    getHomeError: "Ошибка в функции getHome",
+    processingCreationRequest: "Ошибка обработки запроса на создание Блога",
+    getDeleteTestError: "Ошибка в функции getDeleteTest",
+    deletingTest: "Блог удален из базы данных",
+    getEditTestError: "Ошибка в функции getEditTest",
+    postEditTestError: "Ошибка в функции postEditTest",
+    getMainError: "Ошибка в функции getMain",
+    userNotDefined: "Пользователь не определен",
+    getProfileError: "Ошибка в функции getProfile",
+    tokenVerificationError: "Ошибка при верификации токена",
+    tokenAndCookieError: "Ошибка в функции tokenAndCookie",
+    getTakeTestError: "Ошибка в функции getTakeTest",
+    postTakeTestError: "Ошибка в функции postTakeTest",
+    postCreateBlogError: "Ошибка в функции postCreateBlog",
+    getCreateBlogError: "Ошибка в функции getCreateBlog",
+    getBlogIdError: "Ошибка в функции getBlogId",
+    getCategoryError: "Ошибка в функции getCategoryError",
+    titleError: "Страница не существует",
+    getAuthorisationError: "Ошибка в функции getAuthorisation",
+    postHomeError: "Ошибка в функции postHome",
+    loginEndEmailError:
+      "Пользователь с таким логином и электронной почтой уже существует",
+    emailEndLoginlNotFoundError:
+      "Пользователь с такой почтой или паролем не найден",
+    notLoginError: "Пользователь с таким логином уже существует",
+    notEmailError: "Пользователь с такой электронной почтой уже существует",
+  },
+};
+console.log("messageError has been imported");

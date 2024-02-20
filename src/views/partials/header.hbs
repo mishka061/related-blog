@@ -1,0 +1,127 @@
+{{#if tokenIsPresent}}
+<div id="navHeaderContainer">
+    <div class="navContent">
+        <div class="navSearchContent">
+            <div class="headerImages">
+                <a href="/"><img src="/f62273a932c3f6816162b361a2c6a6d4.jpg" alt=""></a>
+            </div>
+            <div class="titleHeader">
+                <h3>IT-Blog - технологии, программирование</h3>
+                <div id="tokkenSearch">
+                    <form action="/" method="POST">
+                        <input type="hidden" name="action" value="search">
+                        <select name="category" class="searhSelectHeader">
+                            <option>Все категории</option>
+                            <option>JavaScript</option>
+                            <option>CSS</option>
+                            <option>HTML</option>
+                            <option>Разное</option>
+                            <input type="submit" name="submit" value="Найти" class="submitHeader">
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="menuRegistrTokken">
+            {{#ifEquals role 'Author'}}
+            <div class="authorBtnHeader">
+                <button class="menuExitAuthor"><a href="/" class="exitToken">Выйти</a></button>
+                <button class="menuCreateBlog" id="createBlogBtn"><a href="/createBlog">Написать статью</a></button>
+                <button class="menuProfileAuthor"><a href="/profile/author">Страница для
+                        автора</a></button>
+            </div>
+            {{else ifEquals role 'Moderator'}}
+            <div class="moderatorBtnHeader">
+                <button class="menuExitAdmin"><a href="/" class="exitToken">Выйти</a></button>
+                <button class="menuProfileModerator"><a href="/profile/moderator">Страница для модератора</a></button>
+            </div>
+            {{else ifEquals role 'Administrator'}}
+            <div class="administratorBtnHeader">
+                <button class="menuExitAdmin"><a href="/" class="exitToken">Выйти</a></button>
+                <button class="menuProfileAdmin"><a href="/profile/administrator">Страница для
+                        администратора</a></button>
+            </div>
+            {{/ifEquals}}
+            {{#ifEquals role 'User'}}
+
+            <button class="menuExit"><a href="/" class="exitToken">Выйти</a></button>
+
+            {{/ifEquals}}
+        </div>
+    </div>
+</div>
+{{else}}
+<div id="navHeaderContainer">
+    <div class="navContent">
+        <div class="headerImages">
+            <a href="/"><img src="/f62273a932c3f6816162b361a2c6a6d4.jpg" alt=""></a>
+        </div>
+        <div class="titleHeader">
+            <h3>IT-Blog - интернет, технологии, программирование</h3>
+            <div id="tokkenSearch">
+                <select id="searhSelectHeader" class="searhSelectHeader">
+                    <option value="Все категории">Все категории</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="CSS">CSS</option>
+                    <option value="HTML">HTML</option>
+                    <option value="Разное">Разное</option>
+                </select>
+                <button class="submitHeader">Найти</button>
+            </div>
+        </div>
+        <div class="menuRegistr">
+            <a href="/authorization">Войти</a>
+        </div>
+    </div>
+</div>
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

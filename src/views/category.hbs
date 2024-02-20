@@ -1,0 +1,55 @@
+{{#if tokenIsPresent}}
+<div class="titleSearchCategory">
+    {{#if category}}
+    Категория: {{category}}
+    {{/if}}
+    <div class="container-fluid" id="homeContent">
+        {{#each arrBlogs}}
+        <div class="home-conteiner">
+            <div class="homeConteinerContent">
+                <div class="home-title">
+                    <h5>{{title}}</h5>
+                </div>
+                <img src="/{{img}}" alt="" class="imgBlog">
+                <div class="home-description">
+                    {{description}}
+                </div>
+                <div class="descriptionBtn">
+                    <input type="hidden" name="id" value="{{id}}">
+
+                    <button class="readMore"><a href="/blog/{{_id}}">Читать далее -></a> </button>
+                </div>
+            </div>
+        </div>
+        {{/each }}
+    </div>
+    <div class="pagination"></div>
+</div>
+{{else}}
+<div class="titleSearchCategory">
+    {{#if category}}
+    Категория: {{category}}
+    {{/if}}
+    <div class="container-fluid" id="homeContent">
+        {{#each arrBlogs}}
+        <div class="home-conteiner">
+            <div class="homeConteinerContent">
+                <div class="home-title">
+                    <h5>{{title}}</h5>
+                </div>
+                <img src="/{{img}}" alt="" class="imgBlog">
+                <div class="home-description">
+                    {{description}}
+                </div>
+                <div class="descriptionBtn">
+                    <input type="hidden" name="id" value="{{id}}">
+
+                    <button class="readMore"><a href="/blog/{{_id}}">Читать далее -></a> </button>
+                </div>
+            </div>
+        </div>
+        {{/each }}
+    </div>
+    <div class="pagination"></div>
+</div>
+{{/if}}

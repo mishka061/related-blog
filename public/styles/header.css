@@ -1,0 +1,418 @@
+#navHeaderContainer {
+  background-color: rgb(0, 0, 0);
+}
+.navContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navSearchContent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.headerImages {
+  margin-left: 20px;
+}
+.headerImages img {
+  width: 150px;
+  height: auto;
+}
+.titleHeader {
+  color: #89b2ff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+#tokkenSearch {
+  text-align: center;
+}
+.searhSelectHeader {
+  background-color: #000000;
+  color: #89b2ff;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+  padding: 2px;
+}
+.menuExitAdmin {
+  background-color: #000000;
+  color: #89b2ff;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+  width: 30%;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 5px;
+}
+.menuProfileAuthor,
+.menuCreateBlog,
+.menuExitAuthor {
+  background-color: #000000;
+  color: #89b2ff;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+  margin-top: 5px;
+}
+
+.menuExit,
+.submitHeader {
+  background-color: #000000;
+  color: #89b2ff;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+  margin: 10px;
+}
+.menuRegistr {
+  height: 30%;
+  margin-top: 68px;
+  margin-right: 20px;
+}
+
+.titleHeader h3 {
+  padding-top: 10px;
+  font-size: 30px;
+}
+.menuProfileAuthor a,
+.menuCreateBlog a,
+.menuExitAuthor a,
+.menuProfileModerator a,
+.menuExitAdmin a,
+.menuProfileAdmin a,
+.menuExit a,
+.submitHeader,
+.searhSelectHeader,
+.menuRegistr a {
+  font-size: 16px;
+}
+.menuRegistr a {
+  padding: 2px 4px;
+  color: #89b2ff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+}
+.menuProfileAuthor:hover,
+.menuCreateBlog:hover,
+.menuExitAuthor:hover,
+.menuProfileModerator:hover,
+.menuExitAdmin:hover,
+.menuProfileAdmin:hover,
+.menuExit:hover,
+.menuRegistr a:hover {
+  background: #89b2ff;
+  color: #050801;
+  box-shadow: 0 0 5px #89b2ff, 0 0 25px #89b2ff, 0 0 50px #89b2ff,
+    0 0 150px #89b2ff;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.footerContent {
+  background-color: rgb(0, 0, 0);
+  color: #89b2ff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+.footerContent a {
+  color: #89b2ff;
+}
+.menuRegistrTokken {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: end;
+  margin-right: 20px;
+}
+.menuProfileAuthor a,
+.menuCreateBlog a,
+.menuExitAuthor a,
+.menuProfileModerator a,
+.menuExitAdmin a,
+.menuProfileAdmin a,
+.menuExit a {
+  color: #89b2ff;
+  text-decoration: none;
+}
+.menuProfileAuthor a:hover,
+.menuCreateBlog a:hover,
+.menuExitAuthor a:hover,
+.menuProfileModerator a:hover,
+.menuExitAdmin a:hover,
+.menuProfileAdmin a:hover,
+.menuExit a:hover {
+  color: #000;
+}
+
+.menuExit {
+  height: 30%;
+  margin-top: 65px;
+}
+.administratorBtnHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  width: 250px;
+  padding-bottom: 10px;
+}
+.moderatorBtnHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  width: 210px;
+  padding-bottom: 10px;
+}
+.authorBtnHeader {
+  margin: 5px 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 190px;
+}
+.menuExitAuthor {
+  margin-left: auto;
+  margin-right: 0;
+  width: 38%;
+}
+.menuCreateBlog {
+  margin-left: auto;
+  margin-right: 0;
+  width: 86%;
+}
+
+.menuProfileModerator {
+  background-color: #000000;
+  color: #89b2ff;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+}
+.menuProfileAdmin {
+  background-color: #000000;
+  color: #89b2ff;
+  border-radius: 5px;
+  transition: 0.4s all ease-in;
+  border: 2px solid #89b2ff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .titleHeader h3 {
+    padding-top: 8px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .navContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navSearchContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .menuProfileAuthor a,
+  .menuCreateBlog a,
+  .menuExitAuthor a,
+  .menuProfileModerator a,
+  .menuExit a,
+  .menuExitAdmin a,
+  .submitHeader,
+  .searhSelectHeader,
+  .menuRegistr a {
+    font-size: 16px;
+  }
+
+  .headerImages {
+    margin-left: 15px;
+  }
+  .headerImages img {
+    width: 140px;
+    height: auto;
+  }
+  .submitHeader {
+    margin: 9px;
+  }
+  .menuRegistr {
+    margin-top: 62px;
+    margin-right: 20px;
+  }
+  .menuProfileAdmin a {
+    font-size: 16px;
+    padding: 0;
+  }
+  .menuExit a {
+    padding: 10px 5px;
+  }
+  .administratorBtnHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 250px;
+    padding-bottom: 8px;
+  }
+  .moderatorBtnHeader {
+    height: 100%;
+    width: 210px;
+    padding-bottom: 10px;
+  }
+  .menuProfileAdmin {
+    margin-top: 2px;
+  }
+  .menuExitAdmin {
+    margin-bottom: 3px;
+    width: 28%;
+  }
+  .menuExit {
+    margin-top: 58px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .titleHeader h3 {
+    padding-top: 5px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .navContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .navSearchContent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .headerImages {
+    margin-left: 10px;
+  }
+  .headerImages img {
+    width: 120px;
+    height: auto;
+  }
+  .menuProfileAuthor a,
+  .menuCreateBlog a,
+  .menuExitAuthor a,
+  .menuProfileModerator a,
+  .menuExitAdmin a,
+  .menuProfileAdmin a,
+  .menuExit a,
+  .submitHeader,
+  .searhSelectHeader,
+  .menuRegistr a {
+    font-size: 14px;
+  }
+
+  .submitHeader {
+    margin: 8px;
+  }
+  .menuRegistr {
+    margin-top: 46px;
+    margin-right: 20px;
+  }
+  .moderatorBtnHeader {
+    height: 100%;
+    width: 190px;
+    padding-bottom: 5px;
+  }
+  .administratorBtnHeader {
+    width: 220px;
+    padding-bottom: 5px;
+  }
+  .menuProfileAdmin {
+    margin-top: 2px;
+  }
+  .menuExitAdmin {
+    margin-bottom: 3px;
+    width: 28%;
+  }
+  .menuExit {
+    margin-top: 60px;
+    margin-right: 10px;
+    padding: 0px 5px;
+  }
+  .authorBtnHeader {
+    width: 155px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .titleHeader h3 {
+    padding-top: 5px;
+    font-size: 16px;
+  }
+  .menuProfileAuthor a,
+  .menuCreateBlog a,
+  .menuExitAuthor a,
+  .menuProfileModerator a,
+  .menuExitAdmin a,
+  .menuProfileAdmin a,
+  .menuExit a,
+  .submitHeader,
+  .searhSelectHeader,
+  .menuRegistr a {
+    font-size: 12px;
+  }
+  .headerImages {
+    margin-left: 0px;
+    bottom: 7px;
+    right: 0;
+  }
+  .headerImages img {
+    margin-top: 5px;
+    width: 90px;
+    height: auto;
+  }
+  .submitHeader {
+    margin: 8px;
+  }
+  .menuRegistr {
+    margin-top: 58px;
+  }
+  .titleHeader {
+    text-align: center;
+    color: #89b2ff;
+    display: flex;
+    flex-direction: column;
+  }
+  .administratorBtnHeader {
+    width: 100%;
+    padding-bottom: 5px;
+    padding-right: 10px;
+  }
+  .menuExitAdmin {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 3px;
+  }
+  .menuExit {
+    margin-top: 55px;
+    margin-right: 10px;
+    height: 28px;
+  }
+  .moderatorBtnHeader {
+    height: 100%;
+    width: 165px;
+    padding-bottom: 5px;
+  }
+  .menuExitAuthor {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .menuCreateBlog {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .authorBtnHeader {
+    width: 135px;
+  }
+}
